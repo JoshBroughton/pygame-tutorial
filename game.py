@@ -4,7 +4,7 @@ pygame.init()
 screen = pygame.display.set_mode([500, 500])
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-GRAY = (100, 100, 100)
+GRAY = (70, 70, 70)
 ORANGE = (237, 144, 43)
 GREEN = (110, 208, 99)
 RED = (230, 50, 52)
@@ -33,3 +33,16 @@ while running:
     pygame.draw.circle(screen, BLUE, (435, 435), 60)
     # Update the display
     pygame.display.flip()
+
+    pygame.time.delay(2000)
+    screen.fill(BLACK)
+    for i in range(0, 3):
+        for j in range(0, 3):
+            x_coordinate = i * 175 + 75
+            y_coordinate = j * 175 + 75
+            pygame.draw.circle(screen, GRAY, (x_coordinate, y_coordinate), 60)
+
+    
+    pygame.display.flip()
+    pygame.time.delay(2000)
+
